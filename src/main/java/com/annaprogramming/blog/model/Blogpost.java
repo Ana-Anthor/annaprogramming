@@ -1,20 +1,22 @@
 package com.annaprogramming.blog.model;
 
 import com.annaprogramming.blog.enumeration.BlogStatus;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import java.util.Date;
 import java.util.UUID;
 @Entity
 public class Blogpost {
     @Id
-    public UUID idNumber;
+    public UUID id;
     private BlogStatus blogStatus;
-    @NotNull(message = "You have to set a Tile for your blogpost")
+    @NotBlank(message = "You have to set a Tile for your blogpost")
     private String title;
-    @NotNull(message = "You have select a author for your blogpost")
+    @NotBlank(message = "You have select a author for your blogpost")
     private String author; //TODO: change to class Author
     private Date createdDate; //TODO: check if createdDate is correct
     private Date publishedDate; //TODO: change datatype to Date
@@ -23,8 +25,10 @@ public class Blogpost {
     public Blogpost() {
     }
 
-    public Blogpost(String title, String author) { //TODO: is this constructor correct or is empty constructor correct?
-        this.idNumber = UUID.randomUUID();
+    public Blogpost(@JsonProperty("id") UUID id,
+                    @JsonProperty("title") String title,
+                    @JsonProperty("author") String author) {
+        this.id = id;
         this.blogStatus = BlogStatus.DRAFT;
         this.title = title;
         this.author = author;
@@ -56,6 +60,17 @@ public class Blogpost {
             return this.publishedDate;
         }
         return null; //TODO: create error-message
+    }
+
+    public String getTitle(){
+        return title;
+    }
+    public String getAuthor(){
+        return author;
+    }
+
+    public UUID getId(){
+        return id;
     }
 
 

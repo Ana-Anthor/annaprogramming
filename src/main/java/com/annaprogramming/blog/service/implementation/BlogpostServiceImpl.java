@@ -1,34 +1,49 @@
 package com.annaprogramming.blog.service.implementation;
 
+import com.annaprogramming.blog.dao.BlogpostDao;
 import com.annaprogramming.blog.model.Blogpost;
 import com.annaprogramming.blog.service.BlogpostService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
 
 import java.util.Collection;
+import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
+@Service //or @component
 public class BlogpostServiceImpl implements BlogpostService {
-    @Override
-    public Blogpost create(Blogpost blogpost) {
-        return null;
+
+    private final BlogpostDao blogpostDao;
+    @Autowired
+    public BlogpostServiceImpl(@Qualifier("fakeDao") BlogpostDao blogpostDao) {
+        this.blogpostDao = blogpostDao;
     }
 
     @Override
-    public Collection<Blogpost> list() {
-        return null;
+    public Blogpost createBlogpost(Blogpost blogpost) {
+
+        return blogpostDao.insertBlogpost(blogpost);
     }
 
     @Override
-    public Blogpost get(UUID id) {
-        return null;
+    public List<Blogpost> getAllBlogpost() {
+        return blogpostDao.selectAllBlogposts();
     }
 
     @Override
-    public Blogpost update(Blogpost blogpost) {
-        return null;
+    public Optional<Blogpost> getBlogpostById(UUID id) {
+        return blogpostDao.selectBlogpostById(id);
     }
 
     @Override
-    public Boolean delete(UUID id) {
-        return null;
+    public Boolean deleteBlogpostById(UUID id) {
+        return blogpostDao.deleteBlogpostById(id);
+    }
+
+    @Override
+    public int updateBlogpostById(UUID id, Blogpost blogpost) {
+        return blogpostDao.updateBlogpostById(id, blogpost);
     }
 }

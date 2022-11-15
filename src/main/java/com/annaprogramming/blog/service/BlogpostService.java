@@ -3,12 +3,15 @@ package com.annaprogramming.blog.service;
 import com.annaprogramming.blog.model.Blogpost;
 
 import java.util.Collection;
+import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 public interface BlogpostService {
-    Blogpost create(Blogpost blogpost);
-    Collection<Blogpost> list();
-    Blogpost get(UUID id);
-    Blogpost update(Blogpost blogpost);
-    Boolean delete(UUID id);
+    Blogpost createBlogpost(Blogpost blogpost);
+    List<Blogpost> getAllBlogpost();
+    Optional<Blogpost> getBlogpostById(UUID id);
+    Boolean deleteBlogpostById(UUID id);
+    int updateBlogpostById(UUID id, Blogpost blogpost);
+
 }
