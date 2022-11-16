@@ -17,7 +17,8 @@ public class BlogpostServiceImpl implements BlogpostService {
 
     private final BlogpostDao blogpostDao;
     @Autowired
-    public BlogpostServiceImpl(@Qualifier("fakeDao") BlogpostDao blogpostDao) {
+    //public BlogpostServiceImpl(@Qualifier("fakeDao") BlogpostDao blogpostDao) {
+    public BlogpostServiceImpl(@Qualifier("postgres") BlogpostDao blogpostDao) {
         this.blogpostDao = blogpostDao;
     }
 
