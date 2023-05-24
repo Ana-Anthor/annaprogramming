@@ -1,6 +1,6 @@
-package com.annaprogramming.blog.service.implementation;
+package src.main.java.com.annaprogramming.blog.service.implementation;
 
-import com.annaprogramming.blog.dao.BlogpostDao;
+import src.main.java.com.annaprogramming.blog.dao.BlogpostDao;
 import com.annaprogramming.blog.model.Blogpost;
 import com.annaprogramming.blog.service.BlogpostService;
 import org.springframework.beans.factory.annotation.Autowired;

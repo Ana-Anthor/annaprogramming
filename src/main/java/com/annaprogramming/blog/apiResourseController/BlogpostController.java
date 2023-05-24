@@ -1,4 +1,4 @@
-package com.annaprogramming.blog.apiResourseController;
+package src.main.java.com.annaprogramming.blog.apiResourseController;
 
 import com.annaprogramming.blog.model.Blogpost;
 import com.annaprogramming.blog.service.BlogpostService;

@@ -1,4 +1,4 @@
-package com.annaprogramming.blog.dao;
+package src.main.java.com.annaprogramming.blog.dao;
 
 import com.annaprogramming.blog.model.Blogpost;
 import org.springframework.stereotype.Repository;

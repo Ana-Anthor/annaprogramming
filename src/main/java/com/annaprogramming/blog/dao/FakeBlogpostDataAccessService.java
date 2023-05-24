@@ -1,4 +1,4 @@
-package com.annaprogramming.blog.dao;
+package src.main.java.com.annaprogramming.blog.dao;
 
 import com.annaprogramming.blog.model.Blogpost;
 import lombok.extern.slf4j.Slf4j;
