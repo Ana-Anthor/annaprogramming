@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'frontend';
+  showForside = false;
+  showPost = false;
+
+  public toggleForside() {
+    this.showForside = !this.showForside;
+  }
+
+    public togglePost() {
+      this.showPost = !this.showPost;
+    }
 }
