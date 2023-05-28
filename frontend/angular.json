@@ -20,8 +20,14 @@
             "tsConfig": "tsconfig.app.json",
             "aot": true,
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              "src/favicon.ico",//TODO: ta bort når ny logo virker - husk å slette filen også
+              "src/header.png",//TODO: få til å virke eller ta bort
+              "src/assets",
+              {
+                "glob": "logo.png",
+                "input": "src/",
+                "output": "/"
+              }
             ],
             "styles": [
               "src/styles.css"
@@ -83,8 +89,15 @@
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              "src/favicon.ico", //TODO: ta bort når ny logo virker - husk å slette filen også
+              "src/logo.png", //TODO: få til å virke eller ta bort
+              "src/header.png",
+              "src/assets",
+              {
+                "glob": "logo.png",
+                "input": "src/",
+                "output": "/"
+              }
             ],
             "styles": [
               "src/styles.css"
