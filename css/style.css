@@ -1,9 +1,15 @@
-
-body {
-    padding-top: 70px;
+* {
+box-sizing: border-box; /* Så padding og border ikke ødelegger layouten */
 }
 
-/* NAV */
+/* BASE */
+body {
+    padding-top: 48px;
+    margin: 0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+/* NAVIGATION */
 nav {
     position: fixed;
     top: 0; left: 0; right: 0;
@@ -45,14 +51,37 @@ nav {
 .nav-links a:hover { color: #a855f7; }
 
 /* HERO */
+
 .hero {
     padding-top: 32px;
+    padding: 64px 2rem; /* Større spacing */
+    max-width: 900px;
+    margin: auto;
 }
+
 .hero h1 {
     font-size: 48px;
 }
 
-/* CATEGORIES */
+.hero p {
+    opacity: 0.7; /* Mindre kontrast på test under tittel */
+    font-size: 18px;
+}
+
+
+/* LAYOUT */
+
+.page-header {
+    padding-top: 32px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.page-header p {
+    opacity: 0.7; /* Mindre kontrast på test under tittel */
+    font-size: 18px;
+}
+
 .section {
     position: relative;
     z-index: 1;
@@ -61,20 +90,21 @@ nav {
     padding: 0 2rem 6rem;
 }
 
-.categories-grid {
+.card-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 16px;
     background: none;
-    border: 1px solid;
+    border: 1px solid rgba(255,255,255,0.06);
     border-radius: 16px;
-    overflow: hidden;
 }
 
-.cat-card {
+/* CARDS */
+
+.card {
     padding: 1.5rem;
     text-decoration: none;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
@@ -82,12 +112,25 @@ nav {
     border-radius: 16px; /* rounded corners */
     position: relative;
     overflow: hidden;
-    transform: translateY(-4px); /* bedre hover effekt */
+    transform: translateY(0); /* bedre hover effekt */
 }
 
-/* On mouse-over, add a deeper shadow */
-.cat-card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  transform: translateY(-3px);
+.card:hover {
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  transform: translateY(-4px);
 }
 
+/* CODE BLOCKS */
+code {
+    background: #1e1e1e;
+    color: #eee;
+    padding: 2px 6px;
+    border-radius: 6px;
+}
+
+pre {
+background: #1e1e1e;
+padding: 16px;
+border-radius: 12px;
+overflow-x: auto;
+}
