@@ -6,7 +6,41 @@ box-sizing: border-box; /* Så padding og border ikke ødelegger layouten */
 body {
     padding-top: 48px;
     margin: 0;
-    font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+    font-family: 'Nunito', system-ui, sans-serif;
+    background: #f0ece4;
+    color: #1e2e14;
+}
+
+/* FONTS */
+@font-face {
+    font-family: 'Lora';
+    src: url('/fonts/Lora/Lora-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: url('/fonts/Nunito/Nunito-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+}
+
+@media (max-width: 600px) {
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        flex-wrap: nowrap;
+        gap: 1rem;
+    }
+
+    .nav-links {
+        gap: 0.8rem;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
 }
 
 /* NAVIGATION */
@@ -15,20 +49,19 @@ nav {
     top: 0; left: 0; right: 0;
     z-index: 100;
     padding: 0 2rem;
-    height: 48px;
+    height: 52px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: rgba(99, 58, 85, 0.85);
+    background: rgba(240, 236, 228, 0.85);
     backdrop-filter: blur(16px);
-    border-bottom: 1px solid;
+    border-bottom: 1px solid #ddd6cc;;
 }
 .nav-logo {
-    font-size: 16px;
-    font-weight: 500;
-    color: white;
-    letter-spacing: -0.3px;
-    text-decoration: none;
+    font-size: 15px;
+    font-weight: 700;
+    color: #2a3d1e;
+    text-decoration: none; /* Fjerner streken under */
 }
 
 .nav-links {
@@ -44,30 +77,45 @@ nav {
 }
 
 .nav-links a {
-    color: white;
+    color: #3d5c3d;
     text-decoration: none; /* Fjerner streken under */
+    font-weight: 700;
 }
 
-.nav-links a:hover { color: #a855f7; }
+.nav-links a:hover { 
+    color: #1e2e14; 
+    text-decoration: underline;
+}
 
 /* HERO */
 
 .hero {
-    padding-top: 32px;
-    padding: 64px 2rem; /* Større spacing */
+    padding: 48px 2rem 32px;
     max-width: 900px;
     margin: auto;
 }
 
+.hero-eyebrow {
+    font-size: 13px;
+    font-weight: 600;
+    color: #7a8c6a;
+    margin-bottom: 10px;
+}
+
 .hero h1 {
     font-size: 48px;
+    font-family: 'Lora', Georgia, serif;
+    font-weight: 700;
+    color: #1e2e14;
+    line-height: 1.15;
+    margin-bottom: 10px;
 }
 
 .hero p {
-    opacity: 0.7; /* Mindre kontrast på test under tittel */
-    font-size: 18px;
+    color: #4a6a4a;
+    font-size: 16px;
+    line-height: 1.6;
 }
-
 
 /* LAYOUT */
 
@@ -77,9 +125,19 @@ nav {
     margin: auto;
 }
 
+.page-header h1 {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 40px;
+    font-weight: 700;
+    color: #1e2e14;
+    line-height: 1.15;
+    margin-bottom: 10px;
+}
+
 .page-header p {
-    opacity: 0.7; /* Mindre kontrast på test under tittel */
-    font-size: 18px;
+    font-size: 16px;
+    color: #4a6a4a;
+    line-height: 1.6;
 }
 
 .section {
@@ -90,34 +148,65 @@ nav {
     padding: 0 2rem 6rem;
 }
 
+.section h2 {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: #8a9a7a;
+    margin-bottom: 14px;
+    text-transform: uppercase;
+}
+
 .card-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 16px;
-    background: none;
-    border: 1px solid rgba(255,255,255,0.06);
-    border-radius: 16px;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
 }
 
 /* CARDS */
 
 .card {
-    padding: 1.5rem;
+    background: #faf8f4;
+    border: 1px solid #e0d8ce;
+    border-radius: 14px; /* rounded corners */
+    padding: 1rem 1.2rem;
     text-decoration: none;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    transition: background 0.2s, box-shadow 0.2s;
-    border-radius: 16px; /* rounded corners */
-    position: relative;
-    overflow: hidden;
-    transform: translateY(0); /* bedre hover effekt */
+    align-items: center;
+    gap: 14px;
+    transition: transform 0.18s, box-shadow 0.18s;
+    padding: 0.75rem 1.2rem;
 }
 
 .card:hover {
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(60,80,40,0.12);
+  transform: translateY(-3px);
+}
+
+.card:focus {
+    outline: 3px solid #3d5c3d;
+    outline-offset: 2px;
+}
+
+.card-text {
+    flex: 1;
+}
+
+.card h3 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1e2e14;
+    margin-bottom: 2px;
+}
+
+.card p {
+    font-size: 13px;
+    color: #4a6a4a;
+}
+
+.card-icon {
+    font-size: 22px;
+    flex-shrink: 0;
 }
 
 /* CODE BLOCKS */

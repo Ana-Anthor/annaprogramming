@@ -19,68 +19,71 @@
             <h1>How to add your local project to GitHub</h1>
             <p>A developers guide to get started.</p>
         </header>
-        <ol>
-            <li>
-                <p>Start a new repository on GitHub:</p>
-                <p>You need to log in to or create a user on github.com.
-                    Then under 'Dashboard' press the button "New". 
-                    Choose a name for your new repository 
-                    (I like to name the project the same as my local project).
-                    Select if you want your project to be Public or Private.
-                    You can add a description if you want.
-                    Then press 'Create a new repository'</p>
-                    <img src="/images/screenshots/NewRepo.jpg" alt="Creating a new GitHub repository">
-            </li>
-            <li>
-                <p>Add a git repository to your local project using HTTPS:</p>
-                <p>
-                    Open terminal and navigate to your project folder where the pom.xml file is located. 
-                    Create a README.md file (if you don't allready have one).
-                </p>
-                <pre><code>$ echo "# myprojectname" >> README.md</code></pre>
-                <p>Then initialize a git project</p>
-                <pre><code>$ git init</code></pre>
-                <p>Add (stage) all files</p>
-                <pre><code>$ git add .</code></pre>
-                <p> (You can also just add the README.md file)</p>
-                <pre><code>$ git add README.md</code></pre>
-                <p>Commit file(s) and write a commit message</p>
-                <pre><code>$ git commit -m "first commit"</code></pre>
-                <p>Create a main branch</p>
-                <pre><code>$ git branch -M main</code></pre>
-                <p>Add your local files to your remote repository on GitHub</p>
-                <pre><code>$ git remote add origin https://github.com/username/myprojectname.git</code></pre>
-                <p>And lastly push your changes</p>
-                <pre><code>$ git push -u origin main</code></pre>
-                <p>If you refresh GitHub.com you can now se your project.</p>
-            </li>
-            <li>
-                <p>Add a git repository to your local project using SSH:</p>
-                <p>To use SSH you first need to exchange keys with GitHub. 
-                    If you have not allready done it, this post explains how to exhanges keys:</p>
-                <p>A link to the page: How to create an SSH key!!!!!!</p> #TODO
-                <p>When your key is ready, open terminal and navigate to your project folder where the pom.xml file is located.
-                    Create a README.md file (if you don't allready have one).
-                </p>
-                <pre><code>$ echo "# myprojectname" >> README.md</code></pre>
-                <p>Then initialize a git project</p>
-                <pre><code>$ git init</code></pre>
-                <p>Add (stage) all files</p>
-                <pre><code>$ git add .</code></pre>
-                <p>Or just the README.md file</p>
-                <pre><code>$ git add README.md</code></pre>
-                <p>Commit file(s) and write a commit message</p>
-                <pre><code>$ git commit -m "first commit"</code></pre>
-                <p>Create a main branch</p>
-                <pre><code>$ git branch -M main</code></pre>
-                <p>Add your local files to your remote repository on GitHub</p>
-                <pre><code>$ git remote add origin git@github.com:username/myprojectname.git</code></pre>
-                <p>And lastly push your changes</p>
-                <pre><code>$ git push -u origin main</code></pre>
-                <p>If you refresh GitHub.com you can now se your project.</p>
-                <p>To learn more about cloning repositories check out this post: #TODO</p>
-            </li>
-        </ol>
+
+        <section class="section">
+            <ol>
+                <li>
+                    <p>Start a new repository on GitHub:</p>
+                    <p>You need to log in to or create a user on github.com.
+                        Then under 'Dashboard' press the button "New". 
+                        Choose a name for your new repository 
+                        (I like to name the project the same as my local project).
+                        Select if you want your project to be Public or Private.
+                        You can add a description if you want.
+                        Then press 'Create a new repository'</p>
+                        <img src="/images/screenshots/NewRepo.jpg" alt="Creating a new GitHub repository">
+                </li>
+                <li>
+                    <p>Add a git repository to your local project using HTTPS:</p>
+                    <p>
+                        Open terminal and navigate to your project folder where the pom.xml file is located. 
+                        Create a README.md file (if you don't allready have one).
+                    </p>
+                    <pre><code>$ echo "# myprojectname" >> README.md</code></pre>
+                    <p>Then initialize a git project</p>
+                    <pre><code>$ git init</code></pre>
+                    <p>Add (stage) all files</p>
+                    <pre><code>$ git add .</code></pre>
+                    <p> (You can also just add the README.md file)</p>
+                    <pre><code>$ git add README.md</code></pre>
+                    <p>Commit file(s) and write a commit message</p>
+                    <pre><code>$ git commit -m "first commit"</code></pre>
+                    <p>Create a main branch</p>
+                    <pre><code>$ git branch -M main</code></pre>
+                    <p>Add your local files to your remote repository on GitHub</p>
+                    <pre><code>$ git remote add origin https://github.com/username/myprojectname.git</code></pre>
+                    <p>And lastly push your changes</p>
+                    <pre><code>$ git push -u origin main</code></pre>
+                    <p>If you refresh GitHub.com you can now se your project.</p>
+                </li>
+                <li>
+                    <p>Add a git repository to your local project using SSH:</p>
+                    <p>To use SSH you first need to exchange keys with GitHub. 
+                        If you have not allready done it, this post explains how to exhanges keys:</p>
+                    <p>A link to the page: How to create an SSH key!!!!!!</p> #TODO
+                    <p>When your key is ready, open terminal and navigate to your project folder where the pom.xml file is located.
+                        Create a README.md file (if you don't allready have one).
+                    </p>
+                    <pre><code>$ echo "# myprojectname" >> README.md</code></pre>
+                    <p>Then initialize a git project</p>
+                    <pre><code>$ git init</code></pre>
+                    <p>Add (stage) all files</p>
+                    <pre><code>$ git add .</code></pre>
+                    <p>Or just the README.md file</p>
+                    <pre><code>$ git add README.md</code></pre>
+                    <p>Commit file(s) and write a commit message</p>
+                    <pre><code>$ git commit -m "first commit"</code></pre>
+                    <p>Create a main branch</p>
+                    <pre><code>$ git branch -M main</code></pre>
+                    <p>Add your local files to your remote repository on GitHub</p>
+                    <pre><code>$ git remote add origin git@github.com:username/myprojectname.git</code></pre>
+                    <p>And lastly push your changes</p>
+                    <pre><code>$ git push -u origin main</code></pre>
+                    <p>If you refresh GitHub.com you can now se your project.</p>
+                    <p>To learn more about cloning repositories check out this post: #TODO</p>
+                </li>
+            </ol>
+        </section>
     </body>
 </html>
 
