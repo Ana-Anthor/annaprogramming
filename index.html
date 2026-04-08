@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Anna Programming</title>
+        <link rel="stylesheet" href="/css/base.css"/>
+        <link rel="stylesheet" href="/css/layout.css"/>
+        <link rel="stylesheet" href="/css/navigation.css"/>
+        <link rel="stylesheet" href="/css/decoration.css"/>
         <link rel="stylesheet" href="/css/style.css"/>
+        <link rel="stylesheet" href="/css/hero.css"/>
+        <link rel="stylesheet" href="/css/cards.css"/>
     </head> 
 
     <body>
-        <div id="nav"></div>
-        <script>
-            fetch("/components/navigation.html")
-            .then(response => response.text())
-            .then(data => {
-            document.getElementById("nav").innerHTML = data;
-            });
-        </script>
+        <div data-component="navigation"></div>
 
-        <header class="hero">
+        <header class="hero container">
             <p class="hero-eyebrow">developer guides · made with care <br>...and coffee ☕</p>
             <h1>Anna <br>Programming</h1>
             <p>A developers guide to get started.</p>
         </header>
 
         <!-- Categories -->
-        <section class="section" id="categories">
+        <section class="section container" id="categories">
             <h2>CATEGORIES</h2>
             <div class="card-grid">
                 <a class="card" href="/categories/git-and-github/git-github.html">
@@ -50,5 +50,6 @@
             </div>
         </section>
         <!-- TODO: Section with latest guides -->
+        <script src="/js/load-components.js"></script>
     </body>
 </html>

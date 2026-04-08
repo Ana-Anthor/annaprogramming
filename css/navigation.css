@@ -1,0 +1,43 @@
+/* NAVIGATION */
+nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 0 2rem;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(240, 236, 228, 0.85);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid #ddd6cc;
+}
+.nav-logo {
+    font-size: 15px;
+    font-weight: 700;
+    color: #2a3d1e;
+    text-decoration: none; /* Fjerner streken under */
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    color: #3d5c3d;
+    text-decoration: none; /* Fjerner streken under */
+    font-weight: 700;
+}
+
+.nav-links a:hover { 
+    color: #1e2e14; 
+    text-decoration: underline;
+}

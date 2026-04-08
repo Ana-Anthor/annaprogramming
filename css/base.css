@@ -1,0 +1,33 @@
+/* DET SOM GJELDER FOR HELE SIDEN */
+
+* {
+box-sizing: border-box; /* Så padding og border ikke ødelegger layouten */
+}
+
+/* FONTS */
+@font-face {
+    font-family: 'Lora';
+    src: url('/fonts/Lora/Lora-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: url('/fonts/Nunito/Nunito-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+}
+
+/* BASE */
+body {
+    padding-top: 48px;
+    margin: 0;
+    font-family: 'Nunito', system-ui, sans-serif;
+    background: #f0ece4;
+    color: #1e2e14;
+}
+
+body::selection {
+    background: #c8ddb8;
+    color: #1e2e14;
+}
+

@@ -1,0 +1,28 @@
+/* CODE BLOCKS */
+
+code {
+    background: #e8e4dc;
+    color: #2a4a2a;
+    padding: 2px 8px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+pre {
+    background: #e8e4dc;
+    border: 1px solid #d4cfc6;
+    border-left: 3px solid #7a9a6a;
+    padding: 16px 20px;
+    border-radius: 10px;
+    overflow-x: auto;
+    margin: 8px 0;
+    max-width: 100%;
+    white-space: pre;
+}
+
+pre code {
+    background: none;
+    color: #2a4a2a;
+    padding: 0;
+    font-size: 14px;
+}

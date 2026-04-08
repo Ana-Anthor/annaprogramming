@@ -1,0 +1,27 @@
+/* HERO */
+
+.hero {
+    padding: 48px 2rem 32px;
+}
+
+.hero-eyebrow {
+    font-size: 13px;
+    font-weight: 600;
+    color: #7a8c6a;
+    margin-bottom: 10px;
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-family: 'Lora', Georgia, serif;
+    font-weight: 700;
+    color: #1e2e14;
+    line-height: 1.15;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    color: #4a6a4a;
+    font-size: 16px;
+    line-height: 1.6;
+}

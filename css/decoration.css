@@ -1,0 +1,50 @@
+/* DECORATION */
+
+body::before {
+    content: '🍃';
+    position: absolute;
+    top: 60px;
+    right: -10px;
+    font-size: 140px;
+    opacity: 0.12;
+    transform: rotate(20deg);
+    pointer-events: none;
+    z-index: 0;
+}
+
+body::after {
+    content: '🌿';
+    position: absolute;
+    bottom: -10px;
+    left: -10px;
+    font-size: 140px;
+    opacity: 0.12;
+    transform: rotate(-10deg);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.section:nth-of-type(odd)::after {
+    right: -200px;
+    content: '🌸';
+    position: absolute;
+    bottom: -40px;
+    right: -80px;
+    font-size: 120px;
+    opacity: 0.10;
+    transform: rotate(15deg);
+    pointer-events: none;
+}
+
+.section:nth-of-type(even)::after {
+    right: auto;
+    left: -200px;
+    content: '🌸';
+    position: absolute;
+    bottom: -40px;
+    right: -80px;
+    font-size: 120px;
+    opacity: 0.12;
+    transform: rotate(15deg);
+    pointer-events: none;
+}

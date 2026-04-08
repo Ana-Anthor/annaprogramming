@@ -1,0 +1,54 @@
+/* ARTICLE / GUIDE PAGE */
+
+ol {
+    padding-left: 1.5rem;
+    margin: 1rem 0;
+}
+
+ol li {
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+    font-size: 16px;
+    color: #1e2e14;
+}
+
+ol li p {
+    margin-bottom: 0.75rem;
+    line-height: 1.7;
+}
+
+.section p {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+}
+
+.section ol {
+    padding-left: 1.5rem;
+}
+
+.section ol li {
+    margin-bottom: 2rem;
+    line-height: 1.7;
+    font-size: 16px;
+}
+
+.section ol li > p:first-child {
+    font-weight: 700;
+    font-size: 17px;
+    color: #1e2e14;
+    margin-bottom: 0.5rem;
+}
+
+.section ol li p {
+    margin-bottom: 0.75rem;
+    color: #3a5a3a;
+}
+
+.section ul {
+    padding-left: 1.5rem;
+    margin: 0.5rem 0;
+}
+
+.section ul li {
+    margin-bottom: 0.5rem;
+}
