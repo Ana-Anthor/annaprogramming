@@ -1,11 +1,3 @@
-fetch("/components/navigation.html")
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById("nav").innerHTML = data;
-            })
-            .catch(error => {
-                console.error("Navigation failed to load:", error);
-            });
 
 document.addEventListener("DOMContentLoaded", () => {
     const components = document.querySelectorAll("[data-component]");

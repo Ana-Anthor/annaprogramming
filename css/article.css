@@ -17,6 +17,23 @@ ol li p {
     line-height: 1.7;
 }
 
+ul {
+    padding-left: 1.5rem;
+    margin: 1rem 0;
+}
+
+ul li {
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+    font-size: 16px;
+    color: #1e2e14;
+}
+
+ul li p {
+    margin-bottom: 0.75rem;
+    line-height: 1.7;
+}
+
 .section p {
     margin-bottom: 1rem;
     line-height: 1.7;
