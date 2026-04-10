@@ -12,6 +12,7 @@ nav {
     backdrop-filter: blur(16px);
     border-bottom: 1px solid #ddd6cc;
 }
+
 .nav-logo {
     font-size: 15px;
     font-weight: 700;

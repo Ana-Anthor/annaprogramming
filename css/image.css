@@ -9,10 +9,6 @@ img {
 
 .section img {
     width: 100%;
-    border-radius: 12px;
-    border: 1px solid #e0d8ce;
-    margin: 1rem 0;
-    display: block;
 }
 
 .img-sm {

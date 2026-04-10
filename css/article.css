@@ -1,71 +1,47 @@
 /* ARTICLE / GUIDE PAGE */
 
-ol {
-    padding-left: 1.5rem;
-    margin: 1rem 0;
-}
-
-ol li {
-    margin-bottom: 1.5rem;
-    line-height: 1.7;
-    font-size: 16px;
-    color: #1e2e14;
-}
-
-ol li p {
-    margin-bottom: 0.75rem;
-    line-height: 1.7;
-}
-
-ul {
-    padding-left: 1.5rem;
-    margin: 1rem 0;
-}
-
-ul li {
-    margin-bottom: 1.5rem;
-    line-height: 1.7;
-    font-size: 16px;
-    color: #1e2e14;
-}
-
-ul li p {
-    margin-bottom: 0.75rem;
-    line-height: 1.7;
-}
-
 .section p {
     margin-bottom: 1rem;
-    line-height: 1.7;
 }
 
-.section ol {
-    padding-left: 1.5rem;
-}
-
-.section ol li {
-    margin-bottom: 2rem;
-    line-height: 1.7;
-    font-size: 16px;
-}
-
-.section ol li > p:first-child {
+.section a {
+    text-decoration: none;
+    color: #3d5c3d;
     font-weight: 700;
-    font-size: 17px;
-    color: #1e2e14;
-    margin-bottom: 0.5rem;
 }
 
-.section ol li p {
+.section a:hover { 
+    color: #1e2e14; 
+    text-decoration: underline;
+}
+
+.section ol, .section ul {
+    padding-left: 1.5rem;
+    margin: 1rem 0;
+}
+
+.section li {
+    line-height: 1.7;
+}
+
+.section ol li, .section ul li {
+    margin-bottom: 1.5rem;
+    font-size: 16px;
+    color: #1e2e14;
+}
+
+.section > ol > li, .section > ul > li {
+    margin-bottom: 2rem;
+}
+
+.section ol li p, .section ul li p {
     margin-bottom: 0.75rem;
     color: #3a5a3a;
 }
 
-.section ul {
-    padding-left: 1.5rem;
-    margin: 0.5rem 0;
-}
-
-.section ul li {
+.section ol li > p:first-child, .section ul li > p:first-child {
+    font-weight: 700;
+    font-size: 17px;
+    color: #1e2e14;
     margin-bottom: 0.5rem;
 }

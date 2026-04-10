@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
         try {
             const response = await fetch(`/components/${name}.html`);
             const html = await response.text();
-            element.innerHTML = html;
+            element.outerHTML = html;
         } catch (error) {
             console.error(`Failed to load component: ${name}`, error);
         }
