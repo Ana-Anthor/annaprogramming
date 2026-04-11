@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,69 +16,69 @@
     </head>
     <body>
         <div data-component="navigation"></div>
+        <main>
+            <header class="page-header container">
+                <h1>How to clone a GitHub repository</h1>
+            </header>
+            <section class="section container article">
+                <p>
+                    When cloning a GitHub repository you can choose either https or ssh. i will explain both methodes:
+                    <ul>
+                        <li><a href="#https">Add a git repository to your local project using HTTPS</a></li>
+                        <li><a href="#ssh">Add a git repository to your local project using SSH</a></li>
+                    </ul>
+                </p>
+            </section>
 
-        <header class="page-header container">
-            <h1>How to clone a GitHub repository</h1>
-        </header>
-        <section class="section container article">
-            <p>
-                When cloning a GitHub repository you can choose either https or ssh. i will explain both methodes:
-                <ul>
-                    <li><a href="#https">Add a git repository to your local project using HTTPS</a></li>
-                    <li><a href="#ssh">Add a git repository to your local project using SSH</a></li>
-                </ul>
-            </p>
-        </section>
+            <section class="section container article" id="https">
+                <h2>Alt 1: Clone a GitHub repository with https</h2>
+                <p>
+                    <ul>
+                        <li>Login to GitHub and open the repo you want to clone</li>
+                        <li>Press the “Code” button and choose HTTPS</li>
+                        <li>Copy the URL</li>
+                        <li>Open the terminal and navigate to the folder where you want the cloned repo</li>
+                        <li>Write “git clone” and paste the URL you copied</li>
+                    </ul>
+                    <code><pre>git clone https://github.com/username/reponame.git</pre></code>
 
-        <section class="section container article" id="https">
-            <h2>Alt 1: Clone a GitHub repository with https</h2>
-            <p>
-                <ul>
-                    <li>Login to GitHub and open the repo you want to clone</li>
-                    <li>Press the “Code” button and choose HTTPS</li>
-                    <li>Copy the URL</li>
-                    <li>Open the terminal and navigate to the folder where you want the cloned repo</li>
-                    <li>Write “git clone” and paste the URL you copied</li>
-                </ul>
-                <code><pre>$ git clone https://github.com/username/reponame.git</pre></code>
-
-            </p>
-        </section>
-        <section class="section container article" id="ssh">
-            <h2>Alt 2: Clone a GitHub repository using SSH</h2>
-            <p>
-                In order to use SSH you first have to exchange keys. If you haven't already, take a look at this post:
-            </p>
-            <div class="card-grid">
-                <a class="card" href="sshKey-github.html">
-                    <span class="card-icon" aria-hidden="true">🌸</span>
-                    <div class="card-text"> 
-                        <h3>How to create a SSH key to use in GitHub</h3>
-                        <p>-> Read guide</p>
-                    </div>
-                </a>
-            </div>
-            <p>
-                <ul>
-                    <li>Login to GitHub and open the repo you want to clone</li>
-                    <li>Press the “Code” button and choose SSH</li>
-                    <li>Copy the URL</li>
-                    <li>Open the terminal and navigate to the folder where you want the cloned repo</li>
-                    <li>Write “git clone” and paste the URL you copied</li>
-                </ul>
-                <code><pre>$ git clone https://github.com/username/reponame.git</pre></code>
-            </p>
-            <p>You may get this warning:</p>
-                
-            <code><pre>The authenticity of host 'github.com (140.82.121.3)' can't be established.
-                RSA key fingerprint is ....
-                This key is not known by any other names
-                Are you sure you want to continue connecting (yes/no/[fingerprint])?
-            </pre></code>
-            <p>Write yes and press enter.</p>
-            <p>List files to se if the repo was successfully added; "ls" on Linux, "dir" on Windows. </p>
-        </section>
-       
+                </p>
+            </section>
+            <section class="section container article" id="ssh">
+                <h2>Alt 2: Clone a GitHub repository using SSH</h2>
+                <p>
+                    In order to use SSH you first have to exchange keys. If you haven't already, take a look at this post:
+                </p>
+                <div class="card-grid">
+                    <a class="card" href="sshKey-github.html">
+                        <span class="card-icon" aria-hidden="true">🌸</span>
+                        <div class="card-text"> 
+                            <h3>How to create an SSH key for GitHub</h3>
+                            <p>-> Read guide</p>
+                        </div>
+                    </a>
+                </div>
+                <p>
+                    <ul>
+                        <li>Login to GitHub and open the repo you want to clone</li>
+                        <li>Press the “Code” button and choose SSH</li>
+                        <li>Copy the URL</li>
+                        <li>Open the terminal and navigate to the folder where you want the cloned repo</li>
+                        <li>Write “git clone” and paste the URL you copied</li>
+                    </ul>
+                    <pre><code>git clone https://github.com/username/reponame.git</code></pre>
+                </p>
+                <p>You may get this warning:</p>
+                    
+                <pre><code>The authenticity of host 'github.com (140.82.121.3)' can't be established.
+                    RSA key fingerprint is ....
+                    This key is not known by any other names
+                    Are you sure you want to continue connecting (yes/no/[fingerprint])?
+                </code></pre>
+                <p>Write yes and press enter.</p>
+                <p>List files to se if the repo was successfully added; "ls" on Linux, "dir" on Windows. </p>
+            </section>
+        </main>
         <script src="/js/load-components.js"></script>
     </body>
 </html>

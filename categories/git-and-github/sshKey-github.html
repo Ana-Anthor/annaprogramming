@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>How to create a SSH key to use in GitHub</title>
+        <title>How to create an SSH key for GitHub</title>
         <link rel="stylesheet" href="/css/base.css"/>
         <link rel="stylesheet" href="/css/layout.css"/>
         <link rel="stylesheet" href="/css/navigation.css"/>
@@ -15,66 +15,130 @@
     </head>
     <body>
         <div data-component="navigation"></div>
-
-        <header class="page-header container">
-            <h1>How to create a SSH key to use in GitHub</h1>
-        </header>
-
-        <section class="section container article">
-            <h2>Key exchange:</h2>
-            <p>
-                If you want to copy a repository with ssh and not https, you first have to exchange ssh keys. 
-                I have written two guides, one for windows and one for iOS/Linux.
-                If you have already made an ssh key, but you have forgotten your password, 
-                you can just make a new one following this guide and it will overwrite your old one.
-            </p>
-            <ul>
-                <li><a href="#windows">For Windows</a></li>
-                <li><a href="#ios-linux">For iOS/Linux</a></li>
-            </ul>
-        </section>
-        <section class="section container article" id="windows">
-            <h2>For Windows:</h2>
-            <p>
-                Press Windows key
-                Open command prompt by typing "cmd", 
-                right click on "Command Prompt" and choose "run as administrator".
-                Navigate to your home location, or the place you want to store your ssh key.
-            </p>
-            <pre><code>$ cd %HOMEPATH%</code></pre>
-            <p>or</p>
-            <pre><code>$ cd C:\Users\yourUser</code></pre>
-            <p>To create a ssh key, write:</p>
-            <pre><code>$ ssh-keygen</code></pre>
-            <p>You will now get this question:</p>
-            <pre><code>$ Enter file in which to save the key (C:\Users\yourUser/.ssh/id_25519):</code></pre>
-            <p>
-                Press enter to save the key in the default directory C:\Users\yourUser/.ssh
-                (If you have an old key you will get a message telling you it already exists and asks you if you want to overwrite is. Write y for yes.)
-                Enter passphrase and choose something you can remember, or just press enter if you don't want to use a passphrase.    
-                Press enter until you see the key's randomart image.
-                Navigate into the the .ssh folder
-            </p>
-            <pre><code>$ cd .ssh</code></pre>
-            <p>Copy your public key:</p>
-            <pre><code>$ type id_25519.pub | clip</code></pre>
-            <p>If you are using git bash you can copy using cat:</p>
-            <pre><code>$ cat id_ed25519.pub | clip</code></pre>
-            <p>
-                Then go to GitHub.
-                Click on your profile image in the upper right corner and select "Settings".
-                In the left margin choose "SSH and GPG keys". Click on "New SSH key".
-            </p>
-            <ul>
-                <li>Title: Choose a title, for instance "My PC"</li>
-                <li>Key type: Anthentication key</li>
-                <li>Key: Paste the key you copied in the key field and press the button "Add SSH key"</li>
-            </ul>
-        </section>
-        <section class="section container article" id="ios-linux">
-            <h2>For iOS/Linux:</h2>
-            <p>to be continued...</p>
-        </section>
+        <main>
+            <header class="page-header container">
+            <h1>How to create an SSH key for GitHub</h1>
+            </header>
+            <section class="section container article">
+                <h2>Key exchange:</h2>
+                <p>
+                    If you want to copy a repository with ssh and not https, you first have to exchange ssh keys. 
+                    I have written two guides, one for windows and one for MacOS/Linux.
+                    If you have already made an SSH key, but you have forgotten your passphrase to your current private key, 
+                    you can just make a new one following this guide. You will be asked if you want to overwrite your old key.
+                </p>
+                <ul>
+                    <li><a href="#windows">-> For Windows</a></li>
+                    <li><a href="#macos-linux">-> For MacOS/Linux</a></li>
+                </ul>
+            </section>
+            <section class="section container article" id="windows">
+                <h2>For Windows:</h2>
+                <ol>
+                    <li>
+                        <p>Open Command Prompt as administrator</p>
+                        <p>Press Windows key.</p>
+                        <p>Open command prompt by typing "cmd" and right click on "Command Prompt" and choose "run as administrator".</p>
+                    </li>
+                    <li>
+                        <p>Navigate to your home location, or the place you want to store your SSH key.</p> 
+                        <p>you can use one of two commands.</p>
+                        <p>This command...</p>
+                        <pre><code>cd %HOMEPATH%</code></pre>
+                        <p>... or this command...</p>
+                        <pre><code>cd C:\Users\yourUser</code></pre>
+                    </li>
+                    <li>
+                        <p>Create an SSH key</p>
+                        <p>To create an SSH key, write:</p>
+                        <pre><code>ssh-keygen -t ed25519</code></pre>
+                        <p>You will now get this question:</p>
+                        <pre><code>Enter file in which to save the key (C:\Users\yourUser/.ssh/id_ed25519):</code></pre>
+                        <p>Press enter to save the key in the default directory: C:\Users\yourUser/.ssh</p>
+                        <p>
+                            (If you have an old key you will get a message telling you it already exists and asks you if you want to overwrite is. 
+                            Write y for yes.)
+                        </p>
+                        <p>
+                            Enter passphrase and choose something you can remember because it can not be restored, 
+                            or just press enter if you don't want to use a passphrase. 
+                            This passphrase is to protect your private SSH key. 
+                            If you happened to forget your passphrase, you have to make a new key and add it to GitHub.
+                        </p>   
+                        <p>Press enter until you see the key's randomart image.</p>
+                    </li>
+                    <li>
+                        <p>Copy your public key (not you private key)</p>
+                        <p>Navigate into the the .ssh folder.</p>
+                        <pre><code>cd .ssh</code></pre>
+                        <p>Copy your public key:</p>
+                        <pre><code>type id_ed25519.pub | clip</code></pre>
+                        <p>If you are using git bash you can copy using cat:</p>
+                        <pre><code>cat id_ed25519.pub | clip</code></pre>
+                    </li>
+                    <li>
+                        <p>Add your public key to GitHub</p>
+                        <p>Then go to GitHub.</p>
+                        <p>Click on your profile image in the upper right corner and select "Settings".</p>
+                        <p>In the left margin choose "SSH and GPG keys". Click on "New SSH key".</p>
+                        <ul>
+                            <li>Title: Choose a title, for instance "My PC"</li>
+                            <li>Key type: Authentication key</li>
+                            <li>Key: Paste the key you copied in the key field and press the button "Add SSH key"</li>
+                        </ul>
+                    </li>
+                </ol>    
+            </section>
+            <section class="section container article" id="macos-linux">
+                <h2>For MacOS/Linux:</h2>
+                <ol>
+                    <li>
+                        <p>Open terminal by clicking command + space, write "terminal" and press enter, and write:</p>
+                        <pre><code>ssh-keygen -t ed25519</code></pre>
+                    </li>
+                    <li>
+                        <p>Press enter to save the key in the default directory.</p>
+                    </li>
+                    <li>
+                        <p>Create a passphrase (if you want)</p>
+                        <p>
+                            Enter passphrase and choose something you can remember because it can not be restored, 
+                            or just press enter if you don't want to use a passphrase. 
+                        </p>
+                        <p>
+                            This passphrase is to protect your private SSH key. 
+                            If you happened to forget your passphrase, you have to make a new key and add it to GitHub.
+                        </p>
+                    </li>
+                    <li>
+                        <p>Navigate to your .ssh folder</p>
+                        <p>Press enter a couple of times, until you see the key's randomart image. Then navigate into the the .ssh folder:</p>
+                        <pre><code>cd .ssh</code></pre>
+                    </li>
+                    <li>
+                        <p>Copy your public key (not your private key):</p>
+                        <ul>
+                            <li> 
+                                <p>On MacOS</p>
+                                <pre><code>pbcopy < ~/.ssh/id_ed25519.pub</code></pre>
+                                <p>On Linux:</p>
+                                <pre><code>cat ~/.ssh/id_ed25519.pub | xclip -selection clipboard</code></pre>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p>Add your key to GitHub</p>
+                        <p>Open GitHub, click on your profile image and select "Settings".</p>
+                        <p>Choose "SSH and GPG keys". Click on "New SSH key".</p>
+                        <ul>
+                            <li>Title: Choose a title, for instance "My MacOS"</li>
+                            <li>Key type: Authentication key</li>
+                            <li>Key: Paste the key you copied in the key field and press the button "Add SSH key"</li>
+                        </ul>
+                    </li> 
+                </ol>
+            </section>
+        </main>
         <script src="/js/load-components.js"></script>
     </body>
 

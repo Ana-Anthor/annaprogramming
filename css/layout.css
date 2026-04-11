@@ -10,8 +10,12 @@
 .section {
     position: relative;
     z-index: 1;
-    padding: 0 2rem 6rem;
+    padding: 0 2rem 3rem;
     scroll-margin-top: 70px;
+}
+
+.article {
+    max-width: 720px;
 }
 
 .section h2 {
@@ -47,8 +51,4 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 12px;
-}
-
-.article {
-    max-width: 720px;
 }

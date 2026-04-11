@@ -1,18 +1,26 @@
 /* ARTICLE / GUIDE PAGE */
 
+.section h2 {
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    color: #3d5c3d;
+    margin-bottom: 14px;
+    text-transform: uppercase;
+}
+
 .section p {
     margin-bottom: 1rem;
 }
 
 .section a {
-    text-decoration: none;
     color: #3d5c3d;
     font-weight: 700;
 }
 
 .section a:hover { 
     color: #1e2e14; 
-    text-decoration: underline;
+    font-weight: 800;
 }
 
 .section ol, .section ul {
@@ -25,13 +33,12 @@
 }
 
 .section ol li, .section ul li {
-    margin-bottom: 1.5rem;
     font-size: 16px;
     color: #1e2e14;
 }
 
 .section > ol > li, .section > ul > li {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 .section ol li p, .section ul li p {
