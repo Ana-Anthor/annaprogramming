@@ -18,6 +18,7 @@ pre {
     margin: 8px 0;
     max-width: 100%;
     white-space: pre;
+    position: relative;
 }
 
 pre code {
@@ -25,4 +26,18 @@ pre code {
     color: #2a4a2a;
     padding: 0;
     font-size: 14px;
+}
+
+.copy-btn {
+    background-color: #e8e4dc;
+    border: 0;
+    position: absolute;
+    top: 4px;
+    right: 0px;
+}
+
+.copy-btn svg {
+    width: 20px;
+    height: 20px;
+    color: #2a4a2a;
 }

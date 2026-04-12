@@ -3,7 +3,17 @@ class CodeBlock extends HTMLElement {
 
     const text = this.textContent.trim();
 
-    this.innerHTML = `<pre><code>${this.toHtml(text)}</code></pre>`;
+    this.innerHTML = `
+      <div class="code-wrapper">
+        <pre><button class="copy-btn"><svg><use href="/icons/icons.svg#copy"></use></svg></button><code>${this.toHtml(text)}</code></pre>
+      </div>
+    `;
+
+    this.querySelector('.copy-btn').addEventListener('click', () => {
+      navigator.clipboard.writeText(text).then(() => {
+        const btn = this.querySelector('.copy-btn');
+      });
+    });
   }
 
     toHtml(str) {
