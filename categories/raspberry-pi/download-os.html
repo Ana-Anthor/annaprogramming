@@ -18,48 +18,86 @@
         <main>
             <header class="page-header container">
             <h1>How to download OS for your Raspberry Pi</h1>
-            <p>Last updated: 12 Mai 2026</p>
+            <p>Last updated: <time datetime="2026-04-13">13 April 2026</time></p>
             </header>
             <section class="section container article">
                 <h2>What you need</h2>
-                <ul>
-                    <li><p>Raspberry Pi</p></li>
-                    <li><p>MicroSD card</p></li>
+                <ul class="simple-list">
                     <li>
-                        <p>A PC or Mac</p>
-                        <p>To download the software</p>
+                        <strong>Raspberry Pi</strong>
+                        <ul>
+                            <li>Any Raspberry Pi will do</li>
+                        </ul>
                     </li>
                     <li>
-                        <p>A MicroSD Card Reader</p>
-                        <p>to transfer the software to the MicroSD card</p>
+                        <strong>MicroSD card</strong>
+                        <ul>
+                            <li>Used as the storage/hard drive for the Pi</li>
+                            <li>16GB or larger recommended.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>A PC or Mac</strong>
+                        <ul>
+                            <li>To download the software</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>A MicroSD Card Reader</strong>
+                        <ul>
+                            <li>To transfer the software to the MicroSD card</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Keyboard and mouse</strong>
+                        <ul>
+                            <li>For input</li>
+                        </ul> 
+                    </li>
+                    <li>
+                        <strong>Monitor</strong>
+                        <ul>
+                            <li><p>With HDMI cable (micro HDMI on Pi 4 and 5)</p></li>
+                        </ul>
                     </li>
                 </ul>
             </section>
-            <section class="section container article" id="windows">
+            <section class="section container article">
                 <h2>What to do</h2>
                 <ol>
                     <li>
-                        <p>Raspberry Pi Imager</p>
-                        <p>Go to <a href="raspberrypi.com">raspberrypi.com</a></p>
-                        <p>Download Raspberry Pi Imager.</p>
+                        <h3>Download Raspberry Pi Imager</h3>
+                        <p>Go to <a href="https://raspberrypi.com" target="_blank" rel="noopener noreferrer">raspberrypi.com</a> (opens in a new tab).</p>
+                        <p>Open the menu in the top right corner and choose <strong>Software</strong>.</p>
+                        <p>Download Raspberry Pi Imager by clicking <strong>Download</strong> for your operating system (Windows, Mac, or Linux).</p>
                     </li>
                     <li>
-                        <p>Transfer the image file to the MicroSD card.</p> 
+                        <h3>Transfer the image file to the MicroSD card.</h3> 
                         <p>Open Raspberry Pi Imager and select your Raspberry Pi device.</p>
-                        <img src="/images/raspberry-pi/rbpi-imager-device.jpg" alt="Picture of devices to choose from" class="img-md">
+                        <figure>
+                            <img 
+                                src="/images/raspberry-pi/rbpi-imager-device.jpg" 
+                                alt="Raspberry Pi Imager showing a list of devices. Raspberry Pi 5 is at the top." 
+                                class="img-md">
+                        </figure>
                         <p>
                             Choose operating system. If you don't know which one to select, 
                             you can most likely choose "Raspberry Pi OS (64-bit)". Then click "Next".
                         </p>
-                        <img src="/images/raspberry-pi/rbpi-imager-os.jpg" alt="Picture of OS to choose from" class="img-md">
+                        <figure>
+                            <img 
+                                src="/images/raspberry-pi/rbpi-imager-os.jpg" 
+                                alt="Raspberry Pi Imager showing operating system options. Raspberry Pi OS (64-bit) is highlighted." 
+                                class="img-md">
+                        </figure>
                         <p>
-                            Select Storage. Here you select your MicroSD card. Remember this will format your card and <b>all data will be lost</b>, 
+                            Select Storage. Here you select your MicroSD card. Remember this will format your card and <strong>all data will be lost</strong>, 
                             so make sure you don't have anything on it that you want to keep.
                         </p>
-                        <p>Press "Write" and wait to the process has finished.</p>
+                        <p>Press "Write" and wait until the process has finished.</p>
                     </li>
                     <li>
-                        <p>You can now put your MicroSD card in your Raspberry Pi.</p>
+                        <h3>You can now put your MicroSD card in your Raspberry Pi.</h3>
                     </li>
                 </ol>    
             </section>
