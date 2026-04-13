@@ -32,3 +32,6 @@ body::selection {
     color: #1e2e14;
 }
 
+html {
+    overflow-x: hidden;
+}

@@ -1,5 +1,5 @@
 /* MEDIA / MOBIL */
-@media (max-width: 800px) {
+@media (max-width: 900px) {
     .card-grid {
         grid-template-columns: 1fr;
     }
