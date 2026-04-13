@@ -28,6 +28,10 @@ pre code {
     font-size: 14px;
 }
 
+pre.code-block {
+    
+}
+
 .copy-btn {
     background: #e8e4dc;
     border: 0;

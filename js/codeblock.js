@@ -2,28 +2,24 @@ const copyIcon = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0
 
 const checkIcon = `<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5"/></svg>`;
 
-class CodeBlock extends HTMLElement {
-  connectedCallback() {
+console.log(document.querySelectorAll('.code-block'));
+document.querySelectorAll('.code-block').forEach(el => {
+  const text = el.textContent.trim();
 
-    const text = this.textContent.trim();
-    this.innerHTML = `
-        <pre><button class="copy-btn">${copyIcon}</button><code>${this.toHtml(text)}</code></pre>`;
+  el.innerHTML = `<button class="copy-btn">${copyIcon}</button><code>${toHtml(text)}</code>`;
 
-    this.querySelector('.copy-btn').addEventListener('click', () => {
-        navigator.clipboard.writeText(text).then(() => {
-            const btn = this.querySelector('.copy-btn');
-            btn.innerHTML = checkIcon;
-            setTimeout(() => btn.innerHTML = copyIcon, 2000);
-        });
+  el.querySelector('.copy-btn').addEventListener('click', () => {
+    navigator.clipboard.writeText(text).then(() => {
+      const btn = el.querySelector('.copy-btn');
+      btn.innerHTML = checkIcon;
+      setTimeout(() => btn.innerHTML = copyIcon, 2000);
     });
-  }
+  });
+});
 
-    toHtml(str) {
-        return str
-        .replace(/&/g, '&amp;')
-        .replace(/</g, '&lt;')
-        .replace(/>/g, '&gt;');
-    }
-}
-
-customElements.define('code-block', CodeBlock);
+function toHtml(str) {
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+} 

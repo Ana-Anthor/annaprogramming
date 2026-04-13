@@ -15,11 +15,12 @@
         <link rel="stylesheet" href="/css/media.css"/>
     </head>
     <body>
+        <a href="#main-content" class="skip-link">Skip to content</a>
         <div data-component="navigation"></div>
-        <main>
+        <main id="main-content">
             <header class="page-header container">
                 <h1>How to add your local project to GitHub</h1>
-                <p>Last updated: 11 May 2026</p>
+                <p>Last updated: <time datetime="2026-04-11">11 April 2026</time></p>
             </header>
 
             <section class="section container article">
@@ -29,61 +30,74 @@
                     The first thing we are going to do is to make a new repository on GitHub.
                     A repository is a place where you keep all your project files, like the code, text files, documentations, images, etc... 
                     It's everything in your project together in one place. A repository is kind of like a folder.
-                    To create the repository you have to navigate to 'Dashboard' and press the button "New": 
-                    <img src="/images/git-github/newRepo.jpg" alt="Picture of the button 'New'" class="img-sm">
+                    To create the repository you have to navigate to 'Dashboard' and press the button "New". 
+                </p>
+                <figure>
+                    <img src="/images/git-github/newRepo.jpg" alt="GitHub dashboard showing the 'New' button to create a repository" class="img-sm">
+                </figure>
+                <p>
                     Choose a name for your new repository 
                     (I like to name the project the same as my local project).
                     Select if you want your project to be Public or Private.
                     You can add a description if you want.
-                    Then press 'Create a new repository'</p>
-                    <img src="/images/git-github/createRepo.jpg" alt="Picture of the button 'Create Repository'" class="img-md">
-                    Now we need to connect your lochal project with the repository we just created on GitHub. 
-                    You can choose between two options, using HTTPS or SSH. HTTPS is easier for beginners, though SSH is more convenient for daily use. 
-                    I have made a guid for both options:
-                    <ul>
-                        <li><a href="#https">Add a git repository to your local project using HTTPS</a></li>
-                        <li><a href="#ssh">Add a git repository to your local project using SSH</a></li>
-                    </ul>
+                    Then press 'Create a new repository'.
                 </p>
+                <figure>
+                    <img src="/images/git-github/createRepo.jpg" alt="GitHub -> Configurations, showing the button 'Create repository'" class="img-md">
+                </figure>
+                <p>
+                    Now we need to connect your local project with the repository we just created on GitHub. 
+                    You can choose between two options, using HTTPS or SSH. HTTPS is easier for beginners, though SSH is more convenient for daily use. 
+                    I have made a guide for both options:
+                </p> 
+                <ul>
+                    <li><strong>Alt 1: </strong><a href="#https">Add a git repository to your local project using HTTPS</a></li>
+                    <li><strong>Alt 2: </strong><a href="#ssh">Add a git repository to your local project using SSH</a></li>
+                </ul>  
             </section>
 
             <section class="section container article" id="https"> 
-                <h2>Add a git repository to your local project using HTTPS:</h2>
+                <h2>Alt 1: Add a git repository to your local project using HTTPS</h2>
                 <p>
                     First you need to copy the project URL on GitHub. 
-                    Navigate to you repository and then click the green button 'Code'. 
+                    Navigate to your repository and then click the green button 'Code'. 
                     Here choose HTTPS and copy the link. 
                 </p>
-                <img src="/images/git-github/cloneRepositoryHttps.jpg" alt="Picture of where to find the projects web URL" class="img-sm">
+                <figure>
+                    <img 
+                        src="/images/git-github/cloneRepositoryHttps.jpg" 
+                        alt="Showing the GitHub menu that appears after clicking the button 'Code', and then selecting 'HTTPS'. It shows the projects web URL." 
+                        class="img-sm">
+                </figure>
                 <p>
                     Open terminal and navigate to your project folder. 
                     Create a README.md file (if you don't already have one).
                 </p>
-                <code-block>echo "# myprojectname" >> README.md</code-block>
+                <pre class="code-block"><code>echo "# myprojectname" >> README.md</code></pre>
                 <p>Then initialize a git project</p>
-                <code-block>git init</code-block>
+                <pre class="code-block"><code>git init</code></pre>
                 <p>Add (stage) all files</p>
-                <code-block>git add .</code-block>
+                <pre class="code-block"><code>git add .</code></pre>
                 <p> (You can also just add the README.md file)</p>
-                <code-block>git add README.md</code-block>
+                <pre class="code-block"><code>git add README.md</code></pre>
                 <p>Commit file(s) and write a commit message</p>
-                <code-block>git commit -m "first commit"</code-block>
+                <pre class="code-block"><code>git commit -m "first commit"</code></pre>
                 <p>Create a main branch</p>
-                <code-block>git branch -M main</code-block>
+                <pre class="code-block"><code>git branch -M main</code></pre>
                 <p>Add your local files to your remote repository on GitHub, using the project URL we just copied on GitHub.</p>
-                <code-block>git remote add origin https://github.com/username/myprojectname.git</code-block>
+                <pre class="code-block"><code>git remote add origin https://github.com/username/myprojectname.git</code></pre>
                 <p>Finally, push your changes</p>
-                <code-block>git push -u origin main</code-block>
+                <pre class="code-block"><code>git push -u origin main</code></pre>
                 <p>If you refresh GitHub.com you can now see your project.</p>
             </section>
 
             <section class="section container article" id="ssh">
-                <h2>Add a git repository to your local project using SSH:</h2>
+                <h2>Alt 2: Add a git repository to your local project using SSH</h2>
                 <p>
                     To use SSH you first need to exchange keys with GitHub. 
                     If you have not already done it, this post explains how to exchange keys:
                 </p>
-                <div class="card-grid">
+                <div class="card-grid section">
                     <a class="card" href="sshKey-github.html">
                         <span class="card-icon" aria-hidden="true">🌸</span>
                         <div class="card-text"> 
@@ -98,34 +112,39 @@
                     Navigate to your repository and then click the green button 'Code'. 
                     Here choose SSH and copy the link. 
                 </p>
-                <img src="/images/git-github/cloneRepositorySsh.jpg" alt="Picture of where to find the projct link" class="img-sm">
+                <figure>
+                    <img 
+                        src="/images/git-github/cloneRepositorySsh.jpg" 
+                        alt="Showing the GitHub menu that appears after clicking the button 'Code', and then selecting 'SSH'. It shows the projects link." 
+                        class="img-sm">
+                </figure>
                 <p>
                     Now that we have the link you can open the terminal and navigate to your project folder.
                     Create a README.md file (if you don't already have one).
                 </p>
-                <code-block>echo "# myprojectname" >> README.md</code-block>
+                <pre class="code-block"><code>echo "# myprojectname" >> README.md</code></pre>
                 <p>Then initialize a git project</p>
-                <code-block>git init</code-block>
+                <pre class="code-block"><code>git init</code></pre>
                 <p>Add (stage) all files</p>
-                <code-block>git add .</code-block>
+                <pre class="code-block"><code>git add .</code></pre>
                 <p>Or just the README.md file</p>
-                <code-block>git add README.md</code-block>
+                <pre class="code-block"><code>git add README.md</code></pre>
                 <p>Commit file(s) and write a commit message</p>
-                <code-block>git commit -m "first commit"</code-block>
+                <pre class="code-block"><code>git commit -m "first commit"</code></pre>
                 <p>Create a main branch</p>
-                <code-block>git branch -M main</code-block>
+                <pre class="code-block"><code>git branch -M main</code></pre>
                 <p>Add your local files to your remote repository on GitHub</p>
-                <code-block>git remote add origin git@github.com:username/myprojectname.git</code-block>
+                <pre class="code-block"><code>git remote add origin git@github.com:username/myprojectname.git</code></pre>
                 <p>Finally, push your changes</p>
-                <code-block>git push -u origin main</code-block>
+                <pre class="code-block"><code>git push -u origin main</code></pre>
                 <p>If you refresh GitHub.com you can now see your project.</p>
                 <p>To learn more about cloning repositories check out this post:</p>
-                <div class="card-grid">
-                    <a class="card" href="#"> <!-- TODO -->
+                <div class="card-grid section">
+                    <a class="card" href="clone-github-repo.html">
                         <span class="card-icon" aria-hidden="true">🌱</span>
-                        <div class="card-text"> 
-                            <h3>How to clone a GitHub repository</h3>
-                            <p>Comming soon</p>
+                        <div class="card-text">
+                            <h3 class="card-title">How to clone a GitHub repository</h3>
+                            <p class="card-description">-> Read Guide</p>
                         </div>
                     </a>
                 </div>
