@@ -26,17 +26,7 @@
         padding: 0 1rem 4rem;
     }
 
-    .section:nth-of-type(odd)::after,
-    .section:nth-of-type(even)::after {
-        display: none;
-    }
-
     ol {
         padding-left: 1.2rem;
-    }
-
-    body::before,
-    body::after {
-        display: none;
     }
 }

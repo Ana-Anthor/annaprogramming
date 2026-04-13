@@ -24,27 +24,3 @@ body::after {
     z-index: 0;
 }
 
-.section:nth-of-type(odd)::after {
-    right: -200px;
-    content: '🌸';
-    position: absolute;
-    bottom: -40px;
-    right: -80px;
-    font-size: 120px;
-    opacity: 0.10;
-    transform: rotate(15deg);
-    pointer-events: none;
-}
-
-.section:nth-of-type(even)::after {
-    right: auto;
-    left: -200px;
-    content: '🌸';
-    position: absolute;
-    bottom: -40px;
-    right: -80px;
-    font-size: 120px;
-    opacity: 0.12;
-    transform: rotate(15deg);
-    pointer-events: none;
-}
