@@ -1,0 +1,41 @@
+/* CODE BLOCKS */
+
+pre.code-block {
+    background: #e8e4dc;
+    border: 1px solid #d4cfc6;
+    border-left: 3px solid #7a9a6a;
+    padding: 16px 20px;
+    border-radius: 10px;
+    overflow-x: auto;
+    margin: 8px 0;
+    max-width: 100%;
+    white-space: pre;
+    position: relative;
+}
+
+pre.code-block > code {
+    background: none;
+    color: #2a4a2a;
+    padding: 0;
+    font-size: 14px;
+    border-radius: 6px;
+}
+
+.copy-btn {
+    background: #e8e4dc;
+    border: 0;
+    position: absolute;
+    top: 4px;
+    right: 2px;
+    border-radius: 10px;
+}
+
+.copy-btn:hover {
+    background-color: #d4cfc6;
+}
+
+.copy-btn svg {
+    width: 20px;
+    height: 20px;
+    color: #2a4a2a;
+}
