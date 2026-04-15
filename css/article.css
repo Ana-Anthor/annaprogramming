@@ -80,3 +80,10 @@
     color: #3a5a3a;
     font-size: 15px;
 }
+
+.video-container iframe {
+    width: 100%;
+    max-width: 560px;
+    aspect-ratio: 16 / 9;
+    height: auto;
+}
